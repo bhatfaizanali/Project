@@ -1,14 +1,15 @@
 import sys
 
 lis =[]
-key = sys.argv[1]
-tn = sys.argv[2]
+try:
+	key = sys.argv[1]
+	tn = sys.argv[2]
+except:
+	print('Usage:python x.py key toolname')
+	exit()
 x = 0
-
 for line in sys.stdin:
 	lis.append(line[:-1])
-
-
 print('{"'+tn+'":[')
 
 
@@ -24,3 +25,4 @@ for line in lis:
 			print(new)
 
 print("]}")
+
